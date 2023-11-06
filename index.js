@@ -11,9 +11,13 @@ class Numbers {
   }
   count() {
     //return the count of numbers in data
+  return this.data.length;
   }
   printNumbers() {
     //print the numbers in data
+    this.data.forEach((number, i) => {
+      console.log(`Index ${i} >> ${number}`);
+    });
   }
   odds() {
     //return the odd numbers in data
@@ -40,7 +44,8 @@ const str = prompt("enter some numbers, like this", "1,2,3,3,5,9");
 
 //create an instance of numbers
 const n1 = new Numbers(str);
-console.log(n1.count()); //returns count of numbers
+console.log("There are :" , n1.count() , "Element in the array."); //returns count of numbers
+console.log("prints the number along with their indexes:");
 n1.printNumbers(); //prints the number along with their indexes
 console.log(n1.odds()); //returns odd numbers
 console.log(n1.evens()); //returns even numbers
