@@ -38,6 +38,8 @@ class Numbers {
   }
   product() {
     //return the product of the numbers
+    let product = this.data.reduce((x,y) => {return x*y} , 1);
+    return product;
   }
   greaterThan(target) {
     //return the numbers greater than the target
