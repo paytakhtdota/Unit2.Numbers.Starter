@@ -21,6 +21,9 @@ class Numbers {
   }
   odds() {
     //return the odd numbers in data
+    let oddsNumbers = this.data.filter(item =>
+    {return item%2 === 1});
+    return oddsNumbers;
   }
   evens() {
     //return the even numbers in data
